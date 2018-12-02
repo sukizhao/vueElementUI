@@ -39,7 +39,10 @@ module.exports = {
       },{
         test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
         loader: 'file-loader'
-      }
+      },{
+        test: /.scss$/,
+        loaders: ["style", "css", "sass"]
+        },
       // main.js里面引用ElementUI之后配置webpack编译字体，再重启项目npm run dev即可
     ]
   },

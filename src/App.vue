@@ -1,9 +1,9 @@
 <template>
-  
+
 <!-- vue的模板里面 所有的内容要被一个根节点包含起来  -->
 
-  <div id="app">  
-    
+  <div id="app">
+
       <h2 v-bind:title="title">绑定属性{{msg}}</h2>
 
       <br>
@@ -42,49 +42,13 @@
         </li>
       </ul>
 
-
-
-        <el-row>
-        <el-button>默认按钮</el-button>
-        <el-button type="primary">主要按钮</el-button>
-        <el-button type="success">成功按钮</el-button>
-        <el-button type="info">信息按钮</el-button>
-        <el-button type="warning">警告按钮</el-button>
-        <el-button type="danger">危险按钮</el-button>
-      </el-row>
-
-      <el-row>
-        <el-button plain>朴素按钮</el-button>
-        <el-button type="primary" plain>主要按钮</el-button>
-        <el-button type="success" plain>成功按钮</el-button>
-        <el-button type="info" plain>信息按钮</el-button>
-        <el-button type="warning" plain>警告按钮</el-button>
-        <el-button type="danger" plain>危险按钮</el-button>
-      </el-row>
-
-      <el-row>
-        <el-button round>圆角按钮</el-button>
-        <el-button type="primary" round>主要按钮</el-button>
-        <el-button type="success" round>成功按钮</el-button>
-        <el-button type="info" round>信息按钮</el-button>
-        <el-button type="warning" round>警告按钮</el-button>
-        <el-button type="danger" round>危险按钮</el-button>
-      </el-row>
-
-      <el-row>
-        <el-button icon="el-icon-search" circle></el-button>
-        <el-button type="primary" icon="el-icon-edit" circle></el-button>
-        <el-button type="success" icon="el-icon-check" circle></el-button>
-        <el-button type="info" icon="el-icon-message" circle></el-button>
-        <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-        <el-button type="danger" icon="el-icon-delete" circle></el-button>
-      </el-row>
-
-  </div>
+  <v-home></v-home>
+ </div>
 </template>
 
 <script>
- export default {     
+import Home from './components/Home.vue';//1、引入组建
+ export default {
       data () {  /*业务逻辑里面定义的数据*/
         return {
           msg: '你好vue',
@@ -120,6 +84,10 @@
           ]
 
         }
+      },
+      // 2、挂载组建  3、在app.vue里面使用模块
+      components:{
+        'v-home':Home
       }
     }
 </script>
