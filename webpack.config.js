@@ -36,7 +36,11 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },{
+        test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+        loader: 'file-loader'
       }
+      // main.js里面引用ElementUI之后配置webpack编译字体，再重启项目npm run dev即可
     ]
   },
   resolve: {
