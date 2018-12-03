@@ -17,27 +17,30 @@
       <swiper-slide><img src="../assets/images/xingtong3.jpg" class="lunbotu"></swiper-slide>
     </swiper>
     <!--以下看需要添加-->
-    <div class="swiper-scrollbar"></div> //滚动条
-    <div class="swiper-button-next"></div> //下一项
-    <div class="swiper-button-prev"></div> //上一项
-    <div class="swiper-pagination"></div> //标页码
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
 </div>
 </template>
 <script>
     /*组件方式引用*/
-    import 'swiper/dist/css/swiper.css'////这里注意具体看使用的版本是否需要引入样式，以及具体位置。
-    import { swiper, swiperSlide } from 'vue-awesome-swiper'
+    import 'swiper/dist/css/swiper.css';
+    import { swiper, swiperSlide } from 'vue-awesome-swiper';
     export default {
-      data() {
-        return {
-            swiperOption: {
-              notNextTick: true,
-              autoplay: true,
-              speed: 500,
-              loop: true
-            },
-          };
-        },
+         data() {
+      return {
+        swiperOption: {
+           pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        }
+      }
+    },
     components: {
       swiper,
       swiperSlide
