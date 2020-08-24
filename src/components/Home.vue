@@ -16,10 +16,8 @@
 
 </script>
 
- <style lang="scss" scoped>
-//  scoped 表示局部作用域
+ <style  scoped>
     h1{color:red;}
-
 </style>
 
 
